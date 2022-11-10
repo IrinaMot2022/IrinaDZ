@@ -38,7 +38,7 @@ Console.Write("Число: ");
 int a = Convert.ToInt32(Console.ReadLine());
 int St = (int)Math.Log10(a);
 Console.WriteLine("Степень числа 10= " + St);
-bool v_is_p = true;
+bool paly = true;
 for (int a_i = 0; a_i < St / 2; a_i++)
 {
     int v_d1 = (int)Math.Truncate((a % Math.Pow(10, a_i + 1)) / (Math.Pow(10, a_i)));
@@ -46,11 +46,11 @@ for (int a_i = 0; a_i < St / 2; a_i++)
     Console.WriteLine($"Compare: {v_d1} =? {v_d2}");
     if (v_d1 != v_d2)
     {
-        v_is_p = false;
+        paly = false;
         break;
     }
 }
-if (v_is_p)
+if (paly)
 {
     Console.WriteLine($"Число {a} является палиндромом");
 }
